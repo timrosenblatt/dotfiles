@@ -2,9 +2,9 @@
 
 ## Command line fun!
 
-key, key2 means press `key` first, then press `key2`
+`key, key2` means press `key` first, then press `key2`
 
-key-key2 means press `key` and `key2` simultaneously
+`key-key2` means press `key` and `key2` simultaneously
 
 ### Navigating text
 * `esc, b` -- jump backwards by word
