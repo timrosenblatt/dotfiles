@@ -20,3 +20,12 @@
 
 ### Other
 * `command-k` -- clear scrollback buffer
+
+# ~/.ssh/config
+
+Create an iTerm profile called "Red" and set the background color to a dark red, or some kind of visual cue. This can also be implemented within iTerm using the "Automatic Profile Switching" 
+```
+Host *prod*
+  PermitLocalCommand yes
+  LocalCommand echo -en "\033]50;SetProfile=Red\a"
+```
