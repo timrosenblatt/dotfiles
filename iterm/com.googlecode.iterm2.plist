@@ -122,7 +122,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/workspace/dotfiles</string>
+	<string>~/workspace/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -170,7 +170,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 350 606 456 0 0 3440 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1475 469 796 473 0 0 3440 1417 </string>
+	<string>1541 447 796 473 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1040 472 1312 945 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1587,7 +1587,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/tim.rosenblatt/workspace/dotfiles</string>
+	<string>/Users/tim.rosenblatt/workspace/dotfiles/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
