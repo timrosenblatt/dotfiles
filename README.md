@@ -1,8 +1,8 @@
 # bash
 
 ## TODOs
-Check out https://github.com/junegunn/fzf
-Set up https://github.com/nojhan/liquidprompt
+* Check out https://github.com/junegunn/fzf
+* Set up https://github.com/nojhan/liquidprompt
 
 ## Command line fun!
 
