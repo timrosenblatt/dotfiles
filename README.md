@@ -6,6 +6,7 @@
   * https://github.com/timrosenblatt/git-commands
   * https://github.com/timrosenblatt/Git-Hooks
   * https://github.com/timrosenblatt/git-oldbranches
+* fix .ssh/config to include a file from in here https://superuser.com/questions/247564/is-there-a-way-for-one-ssh-config-file-to-include-another-one
 
 ## Command line fun!
 
