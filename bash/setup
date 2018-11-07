@@ -1,7 +1,8 @@
-if [ -d "~/liquidprompt" ]; then
-  echo "Liquid Prompt already installed, skipping
+if [ -d ~/liquidprompt ]; then
+  echo "Liquid Prompt already installed, skipping.."
 else
   cd
   git clone https://github.com/nojhan/liquidprompt.git
 fi
 
+echo "Done! Be sure to add 'source_me' to the .bash_profile"

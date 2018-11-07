@@ -1,6 +1,9 @@
 # Activate Liquid Prompt
 [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
+# Activate Liquid Prompt configuration
+source "${BASH_SOURCE%/*}/liquidpromptrc"
+
 
 # Always turn on timestamps
 if [ $TERM_PROGRAM = "iTerm.app" ]; then
