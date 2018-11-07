@@ -1,8 +1,11 @@
-# bash
+# Various configs and such.
 
 ## TODOs
 * Check out https://github.com/junegunn/fzf
-* Set up https://github.com/nojhan/liquidprompt
+* Consolidate git commands
+  * https://github.com/timrosenblatt/git-commands
+  * https://github.com/timrosenblatt/Git-Hooks
+  * https://github.com/timrosenblatt/git-oldbranches
 
 ## Command line fun!
 
