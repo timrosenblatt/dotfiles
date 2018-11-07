@@ -168,15 +168,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 350 606 456 0 0 3440 1417 </string>
+	<string>64 114 606 469 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1541 447 796 473 0 0 3440 1417 </string>
+	<string>282 175 958 451 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1040 472 1312 945 0 0 3440 1417 </string>
+	<string>1740 137 1536 792 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1238 400 2005 979 0 0 3440 1417 </string>
+	<string>1667 388 1438 911 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1633 370 1417 1047 0 0 3440 1417 </string>
+	<string>179 574 1326 843 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>116 108 1424 571 0 0 3440 1417 </string>
 	<key>New Bookmarks</key>
@@ -1551,6 +1551,8 @@
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PerformDNSLookups</key>
 	<false/>
 	<key>PointerActions</key>
@@ -1599,11 +1601,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-25T00:33:51Z</date>
+	<date>2018-10-09T06:29:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUSkippedVersion</key>
-	<string>3.1.6</string>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>WordCharacters</key>
@@ -1615,7 +1615,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.2.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
