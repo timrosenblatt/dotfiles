@@ -1,0 +1,15 @@
+# Activate Liquid Prompt
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
+
+# Always turn on timestamps
+if [ $TERM_PROGRAM = "iTerm.app" ]; then
+  osascript -e 'tell application "System Events" to keystroke "e" using {command down, shift down}'
+fi
+
+alias g='git'
+alias gd='git diff'
+alias gst='git status'
+
+alias dev='g co develop'
+alias migrate='bundle install && RAILS_ENV=test rake db:migrate && rake db:migrate'
