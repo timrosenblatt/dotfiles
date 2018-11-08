@@ -120,7 +120,9 @@ LP_ENABLE_TIME=0
 
 # Show runtime of the previous command if over LP_RUNTIME_THRESHOLD
 # Recommended value is 0
-LP_ENABLE_RUNTIME=1
+LP_ENABLE_RUNTIME=0
+# Tim note: this is a nice feature but it seems like there's a bug. Instead of
+# the runtime of the last command, it shows the total time since the session was opened
 
 # Minimal runtime (in seconds) before the runtime will be displayed
 # Recommended value is 2
