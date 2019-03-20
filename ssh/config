@@ -1,0 +1,3 @@
+Host *prod*
+  PermitLocalCommand yes
+  LocalCommand echo -en "\033]50;SetProfile=Red\a"
