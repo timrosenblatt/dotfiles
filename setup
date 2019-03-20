@@ -10,4 +10,13 @@ echo "Adding git commit message template"
 git config --global commit.template ~/workspace/dotfiles/git/gitmessage
 
 
+
+# check if the ssh config file is being included
+# per https://superuser.com/questions/247564/is-there-a-way-for-one-ssh-config-file-to-include-another-one
+# I need OpenSSH 7.3p1 which can be tested with "ssh -V" but I don't feel like parsing it -- most modern
+# systems are going to have it.
+
+# Check for "Include ~/workspace/dotfiles/ssh/config" and include it if not there
+
+
 echo "Done! Be sure to add 'source_me' to the .bash_profile"
