@@ -6,9 +6,10 @@ else
 fi
 
 
-echo "Adding git commit message template"
+echo "Customizing git config"
 git config --global commit.template ~/workspace/dotfiles/git/gitmessage
-
+git config --global alias.co checkout
+git config --global push.default current
 
 
 # check if the ssh config file is being included
