@@ -20,4 +20,16 @@ git config --global push.default current
 # Check for "Include ~/workspace/dotfiles/ssh/config" and include it if not there
 
 
+# Set up VSC
+code --version
+if [ $? -eq 0 ]; then
+  echo "VSCode is installed. Installing extensions..."
+
+  code --install-extension rebornix.ruby
+  code --install-extension karunamurti.haml
+  code --install-extension knisterpeter.vscode-github
+else
+  echo "VSCode is not installed. Install it and try again"
+fi
+
 echo "Done! Be sure to add 'source_me' to the .bash_profile"
