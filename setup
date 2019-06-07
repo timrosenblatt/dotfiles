@@ -6,9 +6,15 @@ else
 fi
 
 
+
+# https://www.atlassian.com/blog/git/advanced-git-aliases
+# https://github.com/billmei/dotfiles/blob/master/.gitconfig
 echo "Customizing git config"
 git config --global commit.template ~/workspace/dotfiles/git/gitmessage
+
 git config --global alias.co checkout
+git config --global alias.forget '!git add -A && git checkout -f'
+
 git config --global push.default current
 
 
