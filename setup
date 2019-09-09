@@ -1,3 +1,9 @@
+echo "This installs a lot of things. Hit control+c if you want to quit"
+
+sleep 5
+
+# No need to install git, because that's how this file got here
+
 if [ -d ~/liquidprompt ]; then
   echo "Liquid Prompt already installed, skipping.."
 else
@@ -26,7 +32,17 @@ git config --global push.default current
 # Check for "Include ~/workspace/dotfiles/ssh/config" and include it if not there
 
 
-# Set up VSC
+echo "Checking Homebrew"
+brew --version
+if [ $? -eq 0 ]; then
+  echo "Homebrew already installed"
+else
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+
+
+echo "Checking VSCode"
 code --version
 if [ $? -eq 0 ]; then
   echo "VSCode is installed. Installing extensions..."
@@ -35,8 +51,22 @@ if [ $? -eq 0 ]; then
   code --install-extension karunamurti.haml
   code --install-extension knisterpeter.vscode-github
 else
-  echo "VSCode is not installed. Install it and try again"
+  echo "Installing VSCode"
+  brew cask install visual-studio-code
 fi
+
+
+
+# This may require updating the path. Might be ~/Library/Python/3.7/bin/ or whereever
+# that Python is installing binaries.
+echo "Checking AWS CLI"
+aws --version
+if [ $? -eq 0 ]; then
+  echo "AWS CLI is installed. Skipping"
+else
+  pip3 install awscli --upgrade --user
+fi
+
 
 echo "Done! Be sure to add 'source_me' to the .bash_profile"
 
