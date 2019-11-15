@@ -1,8 +1,20 @@
+echo "This script assumes it lives in ~/workspace/dotfiles"
 echo "This installs a lot of things. Hit control+c if you want to quit"
 
 sleep 5
 
 # No need to install git, because that's how this file got here
+
+if [ -d ~/Applications/iTerm.app ]; then
+  echo "iTerm is already installed"
+else
+  echo "Installing iTerm"
+  curl -O https://iterm2.com/downloads/stable/iTerm2-3_3_6.zip
+  unzip iTerm2-3_3_6.zip
+  mv iTerm.app/ ~/Applications/
+  rm iTerm2-3_3_6.zip
+fi
+
 
 if [ -d ~/liquidprompt ]; then
   echo "Liquid Prompt already installed, skipping.."
