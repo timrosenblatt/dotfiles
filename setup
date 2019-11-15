@@ -3,6 +3,16 @@ echo "This installs a lot of things. Hit control+c if you want to quit"
 
 sleep 5
 
+if [ -z "${GIT_USER_NAME}" ]; then
+  echo "What name do you want associated with git commits?"
+  read GIT_USER_NAME
+fi
+
+if [ -z "${GIT_USER_EMAIL}" ]; then
+  echo "What email address do you want associated with git commits?"
+  read GIT_USER_EMAIL
+fi
+
 # No need to install git, because that's how this file got here
 
 if [ -d ~/Applications/iTerm.app ]; then
@@ -34,6 +44,9 @@ git config --global alias.co checkout
 git config --global alias.forget '!git add -A && git checkout -f'
 
 git config --global push.default current
+
+git config --global user.name "$GIT_USER_NAME"
+git config --global user.email $GIT_USER_EMAIL
 
 
 # check if the ssh config file is being included
