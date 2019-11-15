@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# for tracing
+# set -x
+
 echo "This script assumes it lives in ~/workspace/dotfiles"
 echo "This installs a lot of things. Hit control+c if you want to quit"
 
@@ -14,6 +17,34 @@ if [ -z "${GIT_USER_EMAIL}" ]; then
   echo "What email address do you want associated with git commits?"
   read GIT_USER_EMAIL
 fi
+
+CHROME_EXTENSION_PATH="$HOME/Library/Application\ Support/Google/Chrome/External\ Extensions"
+
+# from https://askubuntu.com/questions/1063331/how-to-install-google-chrome-extensions-though-terminal
+# also helpful https://developer.chrome.com/extensions/external_extensions
+install_chrome_extension () {
+  preferences_dir_path="$CHROME_EXTENSION_PATH"
+  pref_file_path="$preferences_dir_path/$1.json"
+  upd_url="https://clients2.google.com/service/update2/crx"
+
+  echo "OK do the dirty"
+  echo $preferences_dir_path
+
+  echo "OK make the dir"
+  mkdir -p "$preferences_dir_path"
+
+  echo "List the dir"
+  ls "$preferences_dir_path"
+
+  
+  echo "{" > "$pref_file_path"
+  echo "  \"external_update_url\": \"$upd_url\"" >> "$pref_file_path"
+  echo "}" >> "$pref_file_path"
+  echo Added \""$pref_file_path"\" ["$2"]
+}
+
+install_chrome_extension "glnpjglilkicbckjpbgcfkogebgllemb" "okta browser plugin"
+install_chrome_extension "hdokiejnpimakedhajhdlcegeplioahd" "lastpass"
 
 # No need to install git, because that's how this file got here
 
