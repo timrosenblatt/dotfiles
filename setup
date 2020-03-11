@@ -108,6 +108,10 @@ else
   echo "Installing VSCode"
   brew cask install visual-studio-code
 fi
+
+# If there's a version upgrade to be done,
+# the install-extension command will interactively
+# prompt for upgrade instructions.
 echo "Installing VSCode extensions..."
 code --install-extension rebornix.ruby
 code --install-extension karunamurti.haml
