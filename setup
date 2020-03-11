@@ -6,7 +6,11 @@
 echo "This script assumes it lives in ~/workspace/dotfiles"
 echo "This installs a lot of things. Hit control+c if you want to quit"
 
-sleep 5
+if [ -z $NO_SLEEP ]; then
+  sleep 5
+else
+  echo "No sleep 'til Brooklyn"
+fi
 
 if [ -z "${GIT_USER_NAME}" ]; then
   echo "What name do you want associated with git commits?"
