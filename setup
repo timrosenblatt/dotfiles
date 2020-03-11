@@ -12,14 +12,26 @@ else
   echo "No sleep 'til Brooklyn"
 fi
 
+echo ""
+echo "* Press enter to use current values *"
 if [ -z "${GIT_USER_NAME}" ]; then
   echo "What name do you want associated with git commits?"
+  echo "Currently:" `git config --get user.name`
   read GIT_USER_NAME
+
+  if [ -z "${GIT_USER_NAME}" ]; then
+    GIT_USER_NAME=`git config --get user.name`
+  fi
 fi
 
 if [ -z "${GIT_USER_EMAIL}" ]; then
   echo "What email address do you want associated with git commits?"
+  echo "Currently:" `git config --get user.email`
   read GIT_USER_EMAIL
+
+  if [ -z "${GIT_USER_EMAIL}" ]; then
+    GIT_USER_EMAIL=`git config --get user.email`
+  fi
 fi
 
 CHROME_EXTENSION_PATH="$HOME/Library/Application\ Support/Google/Chrome/External\ Extensions"
