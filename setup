@@ -147,6 +147,14 @@ else
   rm AWSCLIV2.pkg
 fi
 
+echo "Checking jq"
+jq --version
+if [ $? -eq 0 ]; then
+  echo "jq is already installed"
+else
+  brew install jq
+fi
+
 
 echo "Done! Be sure to add 'source_me' to the .bash_profile"
 
