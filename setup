@@ -6,16 +6,32 @@
 echo "This script assumes it lives in ~/workspace/dotfiles"
 echo "This installs a lot of things. Hit control+c if you want to quit"
 
-sleep 5
+if [ -z $NO_SLEEP ]; then
+  sleep 5
+else
+  echo "No sleep 'til Brooklyn"
+fi
 
+echo ""
+echo "* Press enter to use current values *"
 if [ -z "${GIT_USER_NAME}" ]; then
   echo "What name do you want associated with git commits?"
+  echo "Currently:" `git config --get user.name`
   read GIT_USER_NAME
+
+  if [ -z "${GIT_USER_NAME}" ]; then
+    GIT_USER_NAME=`git config --get user.name`
+  fi
 fi
 
 if [ -z "${GIT_USER_EMAIL}" ]; then
   echo "What email address do you want associated with git commits?"
+  echo "Currently:" `git config --get user.email`
   read GIT_USER_EMAIL
+
+  if [ -z "${GIT_USER_EMAIL}" ]; then
+    GIT_USER_EMAIL=`git config --get user.email`
+  fi
 fi
 
 CHROME_EXTENSION_PATH="$HOME/Library/Application\ Support/Google/Chrome/External\ Extensions"
@@ -104,15 +120,19 @@ fi
 echo "Checking VSCode"
 code --version
 if [ $? -eq 0 ]; then
-  echo "VSCode is installed. Installing extensions..."
-
-  code --install-extension rebornix.ruby
-  code --install-extension karunamurti.haml
-  code --install-extension knisterpeter.vscode-github
+  echo "VSCode is installed."
 else
   echo "Installing VSCode"
   brew cask install visual-studio-code
 fi
+
+# If there's a version upgrade to be done,
+# the install-extension command will interactively
+# prompt for upgrade instructions.
+echo "Installing VSCode extensions..."
+code --install-extension rebornix.ruby
+code --install-extension karunamurti.haml
+code --install-extension knisterpeter.vscode-github
 
 
 
@@ -123,7 +143,17 @@ aws --version
 if [ $? -eq 0 ]; then
   echo "AWS CLI is installed. Skipping"
 else
-  pip3 install awscli --upgrade --user
+  curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+  sudo installer -pkg AWSCLIV2.pkg -target /
+  rm AWSCLIV2.pkg
+fi
+
+echo "Checking jq"
+jq --version
+if [ $? -eq 0 ]; then
+  echo "jq is already installed"
+else
+  brew install jq
 fi
 
 
