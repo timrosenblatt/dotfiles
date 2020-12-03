@@ -2,7 +2,12 @@
 [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 # Activate Liquid Prompt configuration
-source "${BASH_SOURCE%/*}/liquidpromptrc"
+
+# If by zsh
+source "$(dirname $0)/liquidpromptrc"
+
+# If by bash
+# source "${BASH_SOURCE%/*}/liquidpromptrc"
 
 
 # Always turn on timestamps
