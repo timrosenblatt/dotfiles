@@ -45,6 +45,7 @@ install_chrome_extension () {
 
 install_chrome_extension "glnpjglilkicbckjpbgcfkogebgllemb" "okta browser plugin"
 install_chrome_extension "hdokiejnpimakedhajhdlcegeplioahd" "lastpass"
+install_chrome_extension "padekgcemlokbadohgkifijomclgjgif" "switchyomega"
 
 # No need to install git, because that's how this file got here
 
