@@ -171,6 +171,7 @@ else
 fi
 
 
-echo "Done! Be sure to add 'source_me' to the .bash_profile"
 
-# Consider installing https://github.com/segmentio/aws-okta
+brew install kubectx
+
+
