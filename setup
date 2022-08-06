@@ -108,6 +108,29 @@ fi
 
 
 
+echo "export HOMEBREW_NO_AUTO_UPDATE=1" >> ~/.zshrc
+
+# This is to deal with conservative outbound proxies that block brew's UA
+
+cd /usr/local/Homebrew/Library/Homebrew
+# Reset brew in case it broke (brew can still update as it does it through git)
+git reset HEAD --hard
+# update homebrew repository (this will reset changes as well)
+/usr/local/bin/brew update
+# patch brew script to force curl user agent to be used
+cat brew.sh | sed 's/^HOMEBREW_USER_AGENT=.*//' | sed 's/^HOMEBREW_USER_AGENT_CURL=.*/HOMEBREW_USER_AGENT_CURL="${curl_name_and_version\/\/ \/\/}"\
+HOMEBREW_USER_AGENT="${curl_name_and_version\/\/ \/\/}"/' > brew2.sh
+# replace original file
+chmod +x brew2.sh
+rm brew.sh
+mv brew2.sh brew.sh
+cd
+
+
+
+
+
+
 echo "Checking VSCode"
 code --version
 if [ $? -eq 0 ]; then
