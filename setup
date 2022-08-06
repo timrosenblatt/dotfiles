@@ -76,15 +76,6 @@ else
 fi
 
 
-if [ -d ~/liquidprompt ]; then
-  echo "Liquid Prompt already installed, skipping.."
-else
-  cd
-  git clone https://github.com/nojhan/liquidprompt.git
-fi
-
-
-
 # https://www.atlassian.com/blog/git/advanced-git-aliases
 # https://github.com/billmei/dotfiles/blob/master/.gitconfig
 echo "Customizing git config"
