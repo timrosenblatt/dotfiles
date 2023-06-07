@@ -59,9 +59,9 @@ install_chrome_extension () {
   echo Added \""$pref_file_path"\" ["$2"]
 }
 
-install_chrome_extension "glnpjglilkicbckjpbgcfkogebgllemb" "okta browser plugin"
-install_chrome_extension "hdokiejnpimakedhajhdlcegeplioahd" "lastpass"
-install_chrome_extension "padekgcemlokbadohgkifijomclgjgif" "switchyomega"
+# install_chrome_extension "glnpjglilkicbckjpbgcfkogebgllemb" "okta browser plugin"
+# install_chrome_extension "hdokiejnpimakedhajhdlcegeplioahd" "lastpass"
+# install_chrome_extension "padekgcemlokbadohgkifijomclgjgif" "switchyomega"
 
 # No need to install git, because that's how this file got here
 
@@ -106,6 +106,12 @@ else
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# I should look at using the unattended brew install, since this approach requires running
+# the following commands before brew can be used, so the rest of the install fails the
+# first time until it's in the path, then it starts to work again
+# 
+# (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/trosenbl/.zprofile
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 echo "export HOMEBREW_NO_AUTO_UPDATE=1" >> ~/.zshrc
@@ -137,7 +143,7 @@ if [ $? -eq 0 ]; then
   echo "VSCode is installed."
 else
   echo "Installing VSCode"
-  brew cask install visual-studio-code
+  brew install visual-studio-code --cask
 fi
 
 # If there's a version upgrade to be done,

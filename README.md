@@ -1,5 +1,24 @@
 # Various configs and such.
 
+Setting up from scratch...
+
+```
+git --version # to force OSX to install git + devtools
+
+mkdir ~/.ssh/
+cd ~/.ssh/
+ssh-keygen -b 4096 -t rsa
+ssh-add ~/.ssh/${THE_KEY_NAME_GOES_HERE}
+
+# Add the public key to https://github.com/settings/keys
+
+mkdir ~/workspace
+cd ~/workspace
+git clone git@github.com:timrosenblatt/dotfiles.git
+cd dotfiles
+./setup
+```
+
 ## TODOs
 * Check out https://github.com/junegunn/fzf
 * Consolidate git commands
