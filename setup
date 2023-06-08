@@ -115,6 +115,7 @@ fi
 
 
 echo "export HOMEBREW_NO_AUTO_UPDATE=1" >> ~/.zshrc
+echo "source ~/workspace/dotfiles/bash/source_me" >> ~/.zshrc
 
 # This is to deal with conservative outbound proxies that block brew's UA
 
@@ -181,3 +182,4 @@ fi
 brew install kubectx
 
 
+./osx/setup.sh

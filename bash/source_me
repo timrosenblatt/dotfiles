@@ -18,6 +18,3 @@ fi
 alias g='git'
 alias gd='git diff'
 alias gst='git status'
-
-alias dev='g co develop'
-alias migrate='bundle install && RAILS_ENV=test rake db:migrate && rake db:migrate'
