@@ -12,6 +12,8 @@ else
   echo "No sleep 'til Brooklyn"
 fi
 
+ORIGINAL_PATH=`pwd`
+
 echo ""
 echo "* Press enter to use current values *"
 if [ -z "${GIT_USER_NAME}" ]; then
@@ -119,11 +121,11 @@ echo "source ~/workspace/dotfiles/bash/source_me" >> ~/.zshrc
 
 # This is to deal with conservative outbound proxies that block brew's UA
 
-cd /usr/local/Homebrew/Library/Homebrew
+cd /opt/homebrew/Library/Homebrew
 # Reset brew in case it broke (brew can still update as it does it through git)
 git reset HEAD --hard
 # update homebrew repository (this will reset changes as well)
-/usr/local/bin/brew update
+/opt/homebrew/bin/brew update
 # patch brew script to force curl user agent to be used
 cat brew.sh | sed 's/^HOMEBREW_USER_AGENT=.*//' | sed 's/^HOMEBREW_USER_AGENT_CURL=.*/HOMEBREW_USER_AGENT_CURL="${curl_name_and_version\/\/ \/\/}"\
 HOMEBREW_USER_AGENT="${curl_name_and_version\/\/ \/\/}"/' > brew2.sh
@@ -178,8 +180,9 @@ else
 fi
 
 
-
 brew install kubectx
 
+
+cd ${ORIGINAL_PATH}
 
 ./osx/setup.sh
