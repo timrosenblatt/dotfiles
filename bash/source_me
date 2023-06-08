@@ -4,7 +4,8 @@
 # Activate Liquid Prompt configuration
 
 # If by zsh
-source "$(dirname $0)/liquidpromptrc"
+# source "$(dirname $0)/liquidpromptrc"
+# Turning this off for the time being since there's some "unset" permissions issue... :\
 
 # If by bash
 # source "${BASH_SOURCE%/*}/liquidpromptrc"
