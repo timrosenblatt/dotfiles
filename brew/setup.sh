@@ -32,5 +32,7 @@ rm brew.sh
 mv brew2.sh brew.sh
 cd
 
-brew install k9s
-brew install MonitorControl
+brew install \
+az \
+k9s \
+MonitorControl \
