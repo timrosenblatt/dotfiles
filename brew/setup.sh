@@ -33,3 +33,4 @@ mv brew2.sh brew.sh
 cd
 
 brew install k9s
+brew install MonitorControl
