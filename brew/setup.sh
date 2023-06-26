@@ -36,3 +36,4 @@ brew install \
 az \
 k9s \
 MonitorControl \
+tree \
