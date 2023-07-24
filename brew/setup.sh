@@ -40,3 +40,4 @@ MonitorControl \
 tree \
 go-task \
 musaicfm \
+terraform \
