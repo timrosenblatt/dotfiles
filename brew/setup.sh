@@ -33,7 +33,10 @@ mv brew2.sh brew.sh
 cd
 
 brew install \
+awscli \
 az \
 k9s \
 MonitorControl \
 tree \
+go-task \
+musaicfm \
