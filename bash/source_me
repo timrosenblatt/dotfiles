@@ -1,5 +1,5 @@
 # Activate Liquid Prompt
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+# [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 # Activate Liquid Prompt configuration
 
